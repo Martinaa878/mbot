@@ -1,1 +1,132 @@
-const _0x329f63=_0x3bd6;(function(_0x4daf2e,_0x5b53c6){const _0x2292ff=_0x3bd6,_0x2b7526=_0x4daf2e();while(!![]){try{const _0x3a3a1d=parseInt(_0x2292ff(0x1de))/0x1+-parseInt(_0x2292ff(0x1d6))/0x2+parseInt(_0x2292ff(0x1ce))/0x3+-parseInt(_0x2292ff(0x1df))/0x4*(parseInt(_0x2292ff(0x1e2))/0x5)+-parseInt(_0x2292ff(0x1dc))/0x6+-parseInt(_0x2292ff(0x1d2))/0x7+parseInt(_0x2292ff(0x1d0))/0x8;if(_0x3a3a1d===_0x5b53c6)break;else _0x2b7526['push'](_0x2b7526['shift']());}catch(_0x5a412d){_0x2b7526['push'](_0x2b7526['shift']());}}}(_0x4b1d,0x4749e));let handler=async(_0x5c6574,{conn:_0x42f5d5,args:_0x12e8b1,usedPrefix:_0x5e1b5e,command:_0x44e9fe})=>{const _0x4de7d9=_0x3bd6;let _0x317314=global['prems'][_0x4de7d9(0x1d3)](_0xe79e3f=>_0xe79e3f[_0x4de7d9(0x1db)](/[^0-9]/g,'')+_0x4de7d9(0x1e1))[_0x4de7d9(0x1d5)](_0x11e8d8=>_0x11e8d8!=_0x42f5d5[_0x4de7d9(0x1cf)][_0x4de7d9(0x1da)]),_0x11e14e=_0x4de7d9(0x1d1)+_0x317314[_0x4de7d9(0x1d3)](_0x5c04f3=>_0x4de7d9(0x1e0)+_0x5c04f3[_0x4de7d9(0x1db)](/@.+/,''))['join']`\n`;_0x5c6574[_0x4de7d9(0x1d7)](_0x11e14e,null,{'mentions':_0x42f5d5[_0x4de7d9(0x1e5)](_0x11e14e)});};handler[_0x329f63(0x1e3)]=['listprem'],handler[_0x329f63(0x1d9)]=[_0x329f63(0x1d4)],handler[_0x329f63(0x1d8)]=[_0x329f63(0x1e4),'premlist',_0x329f63(0x1dd)];export default handler;function _0x3bd6(_0x1b8d4d,_0xc3c08d){const _0x4b1dac=_0x4b1d();return _0x3bd6=function(_0x3bd60e,_0x52e37a){_0x3bd60e=_0x3bd60e-0x1ce;let _0x46073b=_0x4b1dac[_0x3bd60e];return _0x46073b;},_0x3bd6(_0x1b8d4d,_0xc3c08d);}function _0x4b1d(){const _0x5a4258=['-\x20@','@s.whatsapp.net','1180080eprgnw','help','listprem','parseMention','1200579ZeacMI','user','2035120eBcKZp','\x0a♥⤾·˚♥⤾·˚♥⤾·˚♥⤾·˚\x0a╽❮MARTII\x20BOT\x20BOT❯\x0a┃➳❥➳❥➳❥➳❥➳❥➳❥➳❥➳❥➳❥\x0a┃USUARIOS\x20PREMIUM\x0a➳❥➳❥➳❥➳❥➳❥➳❥➳❥➳❥➳❥\x0a\x0a𝑴𝒂𝒓𝒕𝒊𝒊\x20𝒃𝒐𝒕👸🏻\x0a','2674553jiNday','map','main','filter','201830EdunYR','reply','command','tags','jid','replace','477912rHmTOx','listpremium','436077CtPwyY','4LOdJAi'];_0x4b1d=function(){return _0x5a4258;};return _0x4b1d();}
+/*import fs from 'fs'
+import fetch from 'node-fetch'
+import { xpRange } from '../lib/levelling.js'
+const { levelling } = '../lib/levelling.js'
+import moment from 'moment-timezone'
+let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
+try{
+let locale = 'es'
+let d = new Date(new Date + 3600000)
+let time = d.toLocaleTimeString(locale, {
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric'
+    })
+let _uptime = process.uptime() * 1000
+let uptime = clockString(_uptime) 
+wm = global.wm
+vs = global.vs
+      
+let user = global.db.data.users[m.sender]
+let { exp, diamond, registered, limit, level, role } = global.db.data.users[m.sender]
+let { min, xp, max } = xpRange(level, global.multiplier)
+let name = await conn.getName(m.sender)
+let pareja = global.db.data.users[m.sender].pasangan 
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+const sections = [{
+title: comienzo + ' ' + lenguajeGB['smsLista1']() + ' ' + fin,
+rows: [
+{title: lenguajeGB['smsLista2'](), rowId: `${usedPrefix}creadora`},
+{title: lenguajeGB['smsLista4'](), rowId: `${usedPrefix}ping`},
+{title: lenguajeGB['smsLista5'](), rowId: `${usedPrefix}infomenu`},
+{title: lenguajeGB['smsLista6'](), rowId: `${usedPrefix}allmenu`},
+{title: lenguajeGB['smsLista7'](), rowId: `${usedPrefix}instalarbot`},
+{title: lenguajeGB['smsLista8'](), rowId: `${usedPrefix}serbot`},
+{title: lenguajeGB['smsLista9'](), rowId: `${usedPrefix}términos`, description: '\n'}
+]},{
+title: comienzo + ' ' + lenguajeGB['smsLista10']() + ' ' + fin,
+rows: [
+{title: lenguajeGB['smsLista11'](), rowId: `${usedPrefix}lb`},
+{title: lenguajeGB['smsLista12'](), rowId: `${usedPrefix}listavip`},
+{title: lenguajeGB['smsLista13'](), rowId: `${usedPrefix}pase premium`},
+{title: lenguajeGB['smsLista15'](), rowId: `${usedPrefix}rpgmenu`},
+{title: lenguajeGB['smsLista16'](), rowId: `${usedPrefix}buy`},
+]},{	
+title: comienzo + ' ' + lenguajeGB['smsLista18']() + ' ' + fin,
+rows: [
+{title: lenguajeGB['smsLista19'](), rowId: `${usedPrefix}descargasmenu`},
+{title: lenguajeGB['smsLista20'](), rowId: `${usedPrefix}buscarmenu`},
+{title: lenguajeGB['smsLista21'](), rowId: `${usedPrefix}convertidormenu`},
+{title: lenguajeGB['smsLista22'](), rowId: `${usedPrefix}audioefectomenu`, description: '\n'}
+]},{
+title: comienzo + ' ' + lenguajeGB['smsLista23']() + ' ' + fin,
+rows: [
+{title: lenguajeGB['smsLista24'](), rowId: `${usedPrefix}juegosmenu`},
+{title: lenguajeGB['smsLista25'](), rowId: `${usedPrefix}audios`},
+{title: lenguajeGB['smsLista26'](), rowId: `${usedPrefix}stickermenu`},
+{title: lenguajeGB['smsLista27'](), rowId: `${usedPrefix}makermenu`},
+{title: lenguajeGB['smsLista29'](), rowId: `${usedPrefix}randommenu`},
+{title: lenguajeGB['smsLista30'](), rowId: `${usedPrefix}hornymenu`, description: '\n'}
+]},{	
+title: comienzo + ' ' + lenguajeGB['smsLista31']() + ' ' + fin,
+rows: [
+{title: lenguajeGB['smsLista32'](), rowId: `${usedPrefix}grupomenu`},
+{title: lenguajeGB['smsLista33'](), rowId: `${usedPrefix}listas`},
+{title: lenguajeGB['smsLista34'](), rowId: `${usedPrefix}enable`},
+{title: lenguajeGB['smsLista35'](), rowId: `${usedPrefix}ownermenu`}
+]}]
+const listMessage = {
+text: `┌──────────────
+┆ *𝑻𝒉𝒆 𝑳𝒐𝒍𝒊𝑩𝒐𝒕-𝑴𝑫*
+┆┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┆✨ *𝙃𝙤𝙡𝙖 𝙘𝙤𝙢𝙤 𝙚𝙨𝙩𝙖́ ${name}!!*
+┆ ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ 
+┆➤ *𝘾𝙧𝙚𝙖𝙙𝙤𝙧 𝙙𝙚𝙡 𝙗𝙤𝙩: 𝐍𝐚𝐭𝐢𝐱𝐂𝐡𝐚𝐫𝐥𝐢𝐞*
+┆➤ *𝙉𝙪𝙢𝙚𝙧𝙤 𝙙𝙚𝙡 𝙘𝙧𝙚𝙖𝙙𝙤𝙧:* *wa.me/51994156047 (No Bot)*  ${(conn.user.jid == global.conn.user.jid ? '' : `\n┆➤ *𝙎𝙤𝙮 𝙪𝙣 𝙨𝙪𝙗 𝙗𝙤𝙩 𝙙𝙚𝙡:* *wa.me/${global.conn.user.jid.split`@`[0]}*`) || '\n┆➤ *𝙉𝙪𝙢𝙚𝙧𝙤 𝙙𝙚𝙡 𝙗𝙤𝙩 𝙤𝙛𝙞𝙘𝙞𝙖𝙡:* *wa.me/51994156047*'}
+┆ ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ 
+┆➤ *${lenguajeGB['smsTime']()}*
+┆□ ${time}    
+┆ ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ 
+┆➤ *${lenguajeGB['smsUptime']()}*
+┆□ ${uptime}
+┆ ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ 
+┆➤ *${lenguajeGB['smsVersion']()}*
+┆□ ${vs}
+┆ ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ 
+┆➤ *${lenguajeGB['smsTotalUsers']()}*
+┆□ ${Object.keys(global.db.data.users).length} 
+┆ ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ 
+┆➤ *${lenguajeGB['smsMode']()}*
+┆□ ${global.opts['self'] ? `*${lenguajeGB['smsModePrivate']()}*` : `*${lenguajeGB['smsModePublic']()}*`}
+└────ׂ─ׂ─ׂ─ׂ─────`, footer: `*» ${lenguajeGB['smsPareja']()} ➺ ${pareja ? `${name} 💞 ${conn.getName(pareja)}` : `😛 ${lenguajeGB['smsResultPareja']()}`}* 
+» ${redesMenu.getRandom()}`, //${name} ${ucapan()} //lenguajeGB['smsMenu']()
+title: null,
+buttonText: `${lenguajeGB['smsListaMenu']()}`, 
+sections }
+await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})	
+      
+} catch (e) {
+await conn.sendButton(m.chat, `\n${wm}`, lenguajeGB['smsMalError3']() + '#report ' + usedPrefix + command, null, [[lenguajeGB.smsMensError1(), `#reporte ${lenguajeGB['smsMensError2']()} *${usedPrefix + command}*`]], m)
+console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
+console.log(e)	
+}}
+handler.help = ['en', 'dis'].map(v => v + 'able <option>')
+handler.tags = ['group', 'owner']
+handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|m|\?)$/i
+//handler.register = true
+handler.exp = 50
+export default handler
+function clockString(ms) {
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+}
+function ucapan() {
+  const time = moment.tz('America/Los_Angeles').format('HH')  //America/Los_Angeles  Asia/Jakarta   America/Toronto
+  let res = `${lenguajeGB['smsSaludo']()}`
+  if (time >= 4) {
+    res = `${lenguajeGB['smsDia']()}`
+  }
+  if (time >= 11) {
+    res = `${lenguajeGB['smsTarde']()}`
+  }
+  if (time >= 15) {
+    res = `${lenguajeGB['smsTarde2']()}`
+  }
+  if (time >= 17) {
+    res = `${lenguajeGB['smsNoche']()}`
+  }
+  return res
+} 
+*/
