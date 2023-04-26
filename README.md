@@ -1,5 +1,9 @@
 # ***👸🏻 MARTII-BOT 👸🏻***
 
+<p align="center"> 
+  <a href="https://github.com/Natixemer"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=17&duration=4000&color=F7B11B&center=falso&vCenter=falso&lines=@MARTIII.BS++%F0%9F%90%88;Gracias+por+visitar+este+repositorio.+%F0%9F%92%96" height="90px"
+</p>
+    
 <p align="center">
 <img src= "https://github.com/martii0105/Martii-bot/blob/main/galeria/102%20sin%20t%C3%ADtulo_20230319210127.png" alt="@martii.bs" width="900"/>
 </p>
